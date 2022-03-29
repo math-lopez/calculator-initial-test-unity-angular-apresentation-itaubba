@@ -1,0 +1,19 @@
+<div style="display: inline-flex; width: 100%; margin-top: 5rem; justify-content: center;">
+  <div
+    tabindex="0"
+    class="btn"
+    (appAction)="decrement()"
+  >
+    decrementar
+  </div>
+
+  <h1>{{ numberResult$ | async }}</h1>
+
+  <div
+    tabindex="0"
+    class="btn"
+    (appAction)="increment()"
+  >
+    incrementar
+  </div>
+</div>
