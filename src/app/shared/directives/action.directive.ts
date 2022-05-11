@@ -13,6 +13,6 @@ export class ActionDirective {
 
   @HostListener('keyup', ['$event'])
   public handleKeyUp(event: KeyboardEvent): void {
-    if(event.code !== 'Tab') this.appAction.emit(event);
+    this.appAction.emit(event);
   }
 }

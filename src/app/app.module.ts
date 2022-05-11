@@ -7,18 +7,19 @@ import { ViewResultComponent } from './components/view-result/view-result.compon
 import { InsertNumberCountComponent } from './components/insert-number-count/insert-number-count.component';
 import { ActionDirective } from './shared/directives/action.directive';
 import { FormsModule } from '@angular/forms';
+import { ActionDirectiveModule } from './shared/directives/action.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewResultComponent,
-    InsertNumberCountComponent,
-    ActionDirective
+    InsertNumberCountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ActionDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
