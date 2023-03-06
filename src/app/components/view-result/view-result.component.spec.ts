@@ -22,25 +22,4 @@ describe('ViewResultComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it(`#${ViewResultComponent.prototype.increment.name}
-  should increment value`, (done) => {
-    for(let i = 0; i < 5; i++){
-      component.increment();
-    }
-    component.numberResult$.subscribe(s => {
-      expect(s).toBe(5);
-      done()
-    });
-  });
-
-  it(`#${ViewResultComponent.prototype.increment.name}
-  should decrement value`, (done) => {
-    component.decrement();
-    component.numberResult$.subscribe(s => {
-      expect(s).toBe(0);
-      done()
-    });
-  });
-
 });

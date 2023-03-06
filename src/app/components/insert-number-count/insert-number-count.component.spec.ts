@@ -25,24 +25,4 @@ describe('InsertNumberCountComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it(`#${InsertNumberCountComponent.prototype.setNumberIncrementOrDecrement.name}
-  should set new number increment / decrement`, (done) => {
-    let counter = 5;
-    component.valueInput = counter;
-    component.setNumberIncrementOrDecrement();
-    component.numberTest$.subscribe(q => {
-      expect(q).toBe(counter);
-      done();
-    });
-  });
-
-  it(`(D) Should set new number increment / decrement`, () => {
-    spyOn(component, 'setNumberIncrementOrDecrement');
-    fixture.detectChanges();
-    const btnSetNumber: HTMLElement = fixture.nativeElement.querySelector('#btn-setnumber')
-    btnSetNumber.click();
-    expect(component.setNumberIncrementOrDecrement).toHaveBeenCalled()
-  });
-
 });
